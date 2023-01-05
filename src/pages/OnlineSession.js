@@ -198,7 +198,7 @@ const fetchFirst = async (e) => {
 
 //-------------SERVER CONNECTION---------------
     //new 12-7
-    const socket = io.connect(url);
+    const socket = io.connect('https://mernsample-tool.adaptable.app');
     
     // kay useeffect dapat ung paghcnage ng leaderbpards
     useEffect(() => {
