@@ -198,7 +198,7 @@ const fetchFirst = async (e) => {
 
 //-------------SERVER CONNECTION---------------
     //new 12-7
-    const socket = io.connect('https://charming-paprenjak-891a84.netlify.app');
+    const socket = io.connect('https://mernsample-tool.adaptable.app');
     
     // kay useeffect dapat ung paghcnage ng leaderbpards
     useEffect(() => {
