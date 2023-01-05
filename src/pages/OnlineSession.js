@@ -198,7 +198,7 @@ const fetchFirst = async (e) => {
 
 //-------------SERVER CONNECTION---------------
     //new 12-7
-    const socket = io.connect("http://localhost:4001");
+    const socket = io.connect(url);
     
     // kay useeffect dapat ung paghcnage ng leaderbpards
     useEffect(() => {

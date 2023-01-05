@@ -250,7 +250,7 @@ const OnlineSessionStudent = () => {
 //-------------SERVER CONNECTION---------------
     
    
-    const socket = io.connect("http://localhost:4001");
+    const socket = io.connect(url);
     
     // kay useeffect dapat ung paghcnage ng leaderboards
     useEffect(() => {
