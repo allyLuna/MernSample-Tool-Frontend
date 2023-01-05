@@ -250,7 +250,7 @@ const OnlineSessionStudent = () => {
 //-------------SERVER CONNECTION---------------
     
    
-    const socket = io.connect(url);
+    const socket = io.connect('https://charming-paprenjak-891a84.netlify.app');
     
     // kay useeffect dapat ung paghcnage ng leaderboards
     useEffect(() => {
