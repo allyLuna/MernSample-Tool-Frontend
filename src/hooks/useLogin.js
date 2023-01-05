@@ -14,7 +14,7 @@ export const useLogin = () => {
     
         const student = {username, password}
 
-        const response = await fetch(url+ '/api/students/login-student', {
+        const response = await fetch(url+ 'api/students/login-student', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(student),

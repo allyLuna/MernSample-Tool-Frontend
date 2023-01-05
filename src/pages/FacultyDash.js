@@ -15,7 +15,7 @@ const FacultyDash = () => {
 // for getting average score
 const getDash = async (e) => {
       
-    const response = await fetch(url+'/api/faculty/facdash')
+    const response = await fetch(url+'api/faculty/facdash')
     const data = await response.json()
  
     // get all scores

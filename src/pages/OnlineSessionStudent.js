@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { useFacultySetting } from '../hooks/useFacultySetting'
 import { useSession } from "../hooks/useSession";
 
-const url = 'https://mernsample-tool.adaptable.app/'
+const url = 'https://mernsample-tool.adaptable.app'
 
 const OnlineSessionStudent = () => {
     var [Score, setScore ] = useState(2000)

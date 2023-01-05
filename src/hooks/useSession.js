@@ -21,7 +21,7 @@ export const useSession = () => {
     
         const session = {class_Code}
          room = {class_Code}
-        const response = await fetch(url+ '/api/students/student-home', {
+        const response = await fetch(url+ 'api/students/student-home', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(session),

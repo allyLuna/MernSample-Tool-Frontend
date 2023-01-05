@@ -18,7 +18,7 @@ export const useSelection = () => {
           }
         const selectionDts = {student_uname, eventTimestamp, objectName}
 
-        const response = await fetch(url+'/api/students/createSelection', {
+        const response = await fetch(url+'api/students/createSelection', {
             method: 'POST',
             body: JSON.stringify(selectionDts),
             headers: {'Content-Type': 'application/json',

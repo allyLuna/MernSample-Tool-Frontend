@@ -14,7 +14,7 @@ export const useSignup = () => {
     
         const student = {nameofStudent, username, email, password}
 
-        const response = await fetch(url+'/api/students/signup-student', {
+        const response = await fetch(url+'api/students/signup-student', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(student),
