@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useFacultySetting } from "../hooks/useFacultySetting"
 import { useAuthContextFaculty } from '../hooks/useAuthContextFaculty'
 
+
+const url = 'https://mernsample-tool.adaptable.app/'
 const SessionForm = () => {
   const { dispatch } = useFacultySetting()
   const { faculty } = useAuthContextFaculty()
@@ -22,7 +24,7 @@ const SessionForm = () => {
 
     const session = {class_Name, class_Code, class_Reward}
 
-    const response = await fetch('/api/faculty/faculty-home', {
+    const response = await fetch(url+ '/api/faculty/faculty-home', {
         method: 'POST',
         body: JSON.stringify(session),
         headers: {

@@ -7,6 +7,8 @@ import Dialog from '../components/Msgdlg';
 import io from "socket.io-client";
 import { useEffect } from "react";
 
+const url = 'https://mernsample-tool.adaptable.app/'
+
 //import { selected } from './OnlineSessionStudent';
 
 const OnlineSession = () => {
@@ -40,7 +42,7 @@ const OnlineSession = () => {
 
         //socket.emit("send_message", { message: "Hello" });
        
-        const response = await fetch('/api/students/getResults')
+        const response = await fetch(url + '/api/students/getResults')
         const data = await response.json()
       
       setuResults(data[0].username)
@@ -55,7 +57,7 @@ const OnlineSession = () => {
 };
 
 const fetchFirst = async (e) => {
-    const response = await fetch('/api/students/selectedFirst')
+    const response = await fetch(url + '/api/students/selectedFirst')
     const data = await response.json()
      setSelectedStud(data.student_uname)
     //setidStud(data.id)
@@ -66,7 +68,7 @@ const fetchFirst = async (e) => {
         //for update PARTICPATION FREQ //------new
     const updateFreq = async (e) => {
         
-        const response = await fetch('/api/students/updateParticipation/' + selectedstud, {
+        const response = await fetch(url + '/api/students/updateParticipation/' + selectedstud, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json',
                       'Authorization': `Bearer ${student.token}`},
@@ -82,7 +84,7 @@ const fetchFirst = async (e) => {
     //for update //------new
     const updateScore = async (e) => {
         
-        const response = await fetch('/api/students/updateScore/' + selectedstud, {
+        const response = await fetch(url + '/api/students/updateScore/' + selectedstud, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json',
                       'Authorization': `Bearer ${student.token}`},
@@ -97,7 +99,7 @@ const fetchFirst = async (e) => {
 
      const getStudentScore = async (e) => {
         
-        const response = await fetch('/api/students/getScore/' + selectedstud)
+        const response = await fetch(url + '/api/students/getScore/' + selectedstud)
         const data = await response.json()
         setCurrentScore(data[0].score)
         setScore(Score+currScore)
@@ -114,7 +116,7 @@ const fetchFirst = async (e) => {
         // for getting average score
         const getAveScores = async (e) => {
       
-        const response = await fetch('/api/students/scores')
+        const response = await fetch(url + '/api/students/scores')
         const data = await response.json()
      
         // get all scores
@@ -153,7 +155,7 @@ const fetchFirst = async (e) => {
     // for all students below average score
     const getLTStud = async (e) => {
         
-        const response = await fetch('/api/students/takeaway/' + aveScore)
+        const response = await fetch(url + '/api/students/takeaway/' + aveScore)
         const data = await response.json()
      
         // get all students below ave score

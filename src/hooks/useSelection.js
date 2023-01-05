@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAuthContext} from './useAuthContext';
 
+const url = 'https://mernsample-tool.adaptable.app/'
+
 export const useSelection = () => {
     const [error, setError ] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
@@ -16,7 +18,7 @@ export const useSelection = () => {
           }
         const selectionDts = {student_uname, eventTimestamp, objectName}
 
-        const response = await fetch('/api/students/createSelection', {
+        const response = await fetch(url+'/api/students/createSelection', {
             method: 'POST',
             body: JSON.stringify(selectionDts),
             headers: {'Content-Type': 'application/json',

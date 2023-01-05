@@ -4,6 +4,8 @@ import io from "socket.io-client";
 import { useEffect } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
+const url = 'https://mernsample-tool.adaptable.app/'
+
 export const useSession = () => {
     const [error, setError ] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
@@ -19,7 +21,7 @@ export const useSession = () => {
     
         const session = {class_Code}
          room = {class_Code}
-        const response = await fetch('/api/students/student-home', {
+        const response = await fetch(url+ '/api/students/student-home', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(session),

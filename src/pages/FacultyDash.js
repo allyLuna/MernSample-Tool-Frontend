@@ -3,6 +3,8 @@ import React from "react";
 
 import { useState } from "react";
 
+const url = 'https://mernsample-tool.adaptable.app/'
+
 const FacultyDash = () => {
     const theScores = [];
     const theUsernames =[];
@@ -13,7 +15,7 @@ const FacultyDash = () => {
 // for getting average score
 const getDash = async (e) => {
       
-    const response = await fetch('/api/faculty/facdash')
+    const response = await fetch(rl+'/api/faculty/facdash')
     const data = await response.json()
  
     // get all scores

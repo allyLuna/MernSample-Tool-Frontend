@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useAuthContextFaculty} from './useAuthContextFaculty';
 
+const url = 'https://mernsample-tool.adaptable.app/'
+
 export const useSignupFaculty = () => {
     const [error, setError ] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
@@ -12,7 +14,7 @@ export const useSignupFaculty = () => {
     
         const faculty = {nameofFaculty, username, email, password}
 
-        const response = await fetch('/api/faculty/signup-faculty', {
+        const response = await fetch(url+'/api/faculty/signup-faculty', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(faculty),
