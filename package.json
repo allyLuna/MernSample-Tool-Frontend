@@ -1,5 +1,5 @@
 {
-  "proxy": "http://mernsample-tool.adaptable.app",
+  "proxy": "https://mernsample-tool.adaptable.app",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
