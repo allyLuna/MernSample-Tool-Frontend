@@ -11,7 +11,7 @@ export const useSession = () => {
     const [isLoading, setIsLoading] = useState(null)
     const {dispatch} = useFacultySetting()
     const {student} = useAuthContext()
-    const socket = io.connect("http://localhost:4001");
+  //  const socket = io.connect("http://localhost:4001");
    // const [room, setRoom] = useState("")
    var room = {};
 
@@ -41,10 +41,7 @@ export const useSession = () => {
             // update auth context
             dispatch({type: 'ENTER_SESSION', payload: json})
             
-            if (room !== "") {
-                socket.emit("join_room", session);
-            }
-
+          
             setIsLoading(false)
 
 
