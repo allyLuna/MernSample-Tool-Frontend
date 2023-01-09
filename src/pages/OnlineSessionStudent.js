@@ -250,19 +250,22 @@ const OnlineSessionStudent = () => {
 //-------------SERVER CONNECTION---------------
     
    
-    const socket = io.connect('https://charming-paprenjak-891a84.netlify.app');
+    //const socket = io.connect("https://particify-backend.adaptable.app:80");
     
+    const socket = io.connect('https://mernsample-tool.adaptable.app/',
+        { //cors:{origin: "https://enchanting-madeleine-c3ff07.netlify.app"} ,
+         transports: ['websocket','polling'],
+         upgrade:false})
     // kay useeffect dapat ung paghcnage ng leaderboards
     useEffect(() => {
         socket.on("receive_message", () => {
-            
            fetchFirst();
            getStudentScore();
            getResults();
            setShowTaskDlg(true);	
            
     });
-    }, [socket])
+    }, [])
 
     
 //-------------END------------------------------

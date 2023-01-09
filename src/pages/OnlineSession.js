@@ -140,7 +140,7 @@ const fetchFirst = async (e) => {
         getLTStud()
         setShowTaskDlg(true);
         setdlgTitle("Takeaway")
-       socket.emit("send_message")
+       //socket.emit("send_message")
         return data;
     };
 
@@ -148,7 +148,7 @@ const fetchFirst = async (e) => {
         {
   
         return items[Math.floor(Math.random()*items.length)];
-     
+            
     }
 
     
@@ -177,7 +177,7 @@ const fetchFirst = async (e) => {
         getStudentScore();
         updateScore();
         updateFreq();
-
+        socket.emit("send_message")
         return data;
     };
 
